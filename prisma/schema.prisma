@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  output   = "../prisma/generated/prisma"
 }
 
 datasource db {
@@ -9,6 +10,5 @@ datasource db {
 
 model Blog {
   id      String @id @default(auto()) @map("_id") @db.ObjectId
-  content String
   title   String
 }
